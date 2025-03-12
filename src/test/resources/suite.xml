@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Pet Store Test" verbose="1">
+    <test name="User Tests">
+        <classes>
+            <class name="org.globant.tests.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
