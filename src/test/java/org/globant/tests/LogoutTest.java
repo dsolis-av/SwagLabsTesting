@@ -1,11 +1,5 @@
 package org.globant.tests;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.globant.pages.LoginPage;
-import org.globant.pages.TopBar;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,7 +23,8 @@ public class LogoutTest extends BaseTest{
         topBar.clickBurguerButton();
         //Click the logout button
         topBar.clickLogoutButton();
-        //Assert the visibility of the username field. If it is visible, it means we are in the login page
+        //Assert the visibility of the username field.
+        //If it is visible it means we are in the login page
         Assert.assertTrue(loginPage.isUsernameFieldDisplayed());
     }
 

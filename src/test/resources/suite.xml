@@ -2,7 +2,9 @@
 <suite name="Pet Store Test" verbose="1">
     <test name="User Tests">
         <classes>
-            <class name="org.globant.tests.LoginTest"></class>
+            <class name="org.globant.tests.PurchaseRandomItemTest"></class>
+            <class name="org.globant.tests.ClearCartTest"></class>
+            <class name="org.globant.tests.LogoutTest"></class>
         </classes>
     </test>
 </suite>

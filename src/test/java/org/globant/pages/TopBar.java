@@ -1,9 +1,9 @@
 package org.globant.pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -43,7 +43,12 @@ public class TopBar  extends BasePage {
         return new CartPage(driver);
     }
 
-    public boolean isCartBadgeDisplayed(){
-        return cartBadge.isDisplayed();
+    public boolean isCartBadgeDisplayed() {
+        try {
+            return cartBadge.isDisplayed();
+        } catch (NoSuchElementException e) {
+            //This means the element is not in the DOM anymore
+            return false;
+        }
     }
 }

@@ -15,6 +15,9 @@ public class CartPage extends BasePage{
     @FindBy(id = "remove-sauce-labs-bolt-t-shirt")
     private WebElement removeShirtButton;
 
+    @FindBy(id = "checkout")
+    private WebElement checkoutButton;
+
     public CartPage(WebDriver driver){
         super(driver);
     }
@@ -29,6 +32,11 @@ public class CartPage extends BasePage{
 
     public void clickRemoveShirtButton(){
         removeShirtButton.click();
+    }
+
+    public CheckoutStepOnePage clickCheckoutButton(){
+        checkoutButton.click();
+        return new CheckoutStepOnePage(driver);
     }
 
 }

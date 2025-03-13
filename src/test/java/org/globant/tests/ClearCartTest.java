@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 public class ClearCartTest extends BaseTest{
 
 
+    private static final Logger log = LoggerFactory.getLogger(ClearCartTest.class);
+
     @DataProvider(name = "Login data to test clear cart")
     public Object[][] loginData() {
         return new Object[][] {
@@ -42,10 +44,9 @@ public class ClearCartTest extends BaseTest{
             Assert.assertFalse(topBar.isCartBadgeDisplayed());
         }else{
             //The badge is not visible, so something went wrong adding the products
+            log.info("Products were not added");
             Assert.fail();
         }
-
-
     }
 
 }
