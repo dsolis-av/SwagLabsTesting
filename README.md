@@ -5,9 +5,9 @@ This project is an automated web testing suite developed in Java to validate the
 ## What It Does
 
 The test suite covers the following scenarios:
-- Successful login and logout.
+- Validating successful login and logout.
 - Purchasing a random product and validating the entire flow until arriving at the successful purchase screen.
-- Adding and successfully removing items from the shop cart.
+- Adding items and validating their successful removal from the shop cart.
 
 ## How to run with IntelliJ
 
